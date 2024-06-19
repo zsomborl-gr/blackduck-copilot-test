@@ -48,7 +48,7 @@ class Program
     }
 
     // ok: regular-expression-dos
-    public void Validate5(string search)
+    public void Validate6(string search)
     {
         var pattern = @"^A(B|C+)+D";
         var result = Regex.Match(search, pattern, new RegexOptions { }, TimeSpan.FromSeconds(2000));
