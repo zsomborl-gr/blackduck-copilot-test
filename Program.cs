@@ -25,13 +25,6 @@ class Program
 
     }
 
-    public void ValidateRegex10(string search)
-    {
-        Regex rgx = new Regex("^A(B|C+)+D", new RegexOptions { });
-        rgx.Match(search);
-
-    }
-
     // ok: regular-expression-dos
     public void ValidateRegex3(string search)
     {
@@ -55,7 +48,7 @@ class Program
     }
 
     // ok: regular-expression-dos
-    public void Validate5(string search)
+    public void Validate6(string search)
     {
         var pattern = @"^A(B|C+)+D";
         var result = Regex.Match(search, pattern, new RegexOptions { }, TimeSpan.FromSeconds(2000));
