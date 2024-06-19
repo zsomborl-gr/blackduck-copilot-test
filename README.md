@@ -1,4 +1,4 @@
 # blackduck-copilot-test
 Testing Blackduck github app
 
-|[![Security Risk - CoPilot](https://copilot.blackducksoftware.com/github/repos/zsomborl-gr/blackduck-copilot-test/branches/main/badge-risk.svg)](https://copilot.blackducksoftware.com/github/repos/zsomborl-gr/blackduck-copilot-test/branches/main)|
+[![CodeQL](https://github.com/zsomborl-gr/blackduck-copilot-test/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/zsomborl-gr/blackduck-copilot-test/actions/workflows/github-code-scanning/codeql)
