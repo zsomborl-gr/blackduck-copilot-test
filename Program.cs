@@ -10,7 +10,7 @@ class Program
     }
     
     // ruleid: regular-expression-dos
-    public void ValidateRegex10(string search)
+    public void ValidateRegex(string search)
     {
         Regex rgx = new Regex("^A(B|C+)+D");
         rgx.Match(search);
@@ -19,6 +19,13 @@ class Program
 
     // ruleid: regular-expression-dos
     public void ValidateRegex2(string search)
+    {
+        Regex rgx = new Regex("^A(B|C+)+D", new RegexOptions { });
+        rgx.Match(search);
+
+    }
+
+    public void ValidateRegex10(string search)
     {
         Regex rgx = new Regex("^A(B|C+)+D", new RegexOptions { });
         rgx.Match(search);
