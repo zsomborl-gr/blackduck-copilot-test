@@ -1,13 +1,40 @@
 using System.Text.RegularExpressions;
+using CodeSecurityGuardrails.FindingMatching;
 
 namespace TestProject;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        if (args.Length < 2)
+        {
+            Console.WriteLine("Usage: <baseFileName> <headFileName>");
+            return;
+        }
+
+        string baseFileName = args[0];
+        string headFileName = args[1];
+
+        ValidateRegex(baseFileName);
+
+        // Define /tmp as the base directory for both base and head
+        string baseRepoDir = "/tmp";
+        string headRepoDir = "/tmp";
+
+        // Initialize the FileSrcPairLoader with /tmp directory paths
+        var loader = new FileSrcPairLoader(baseRepoDir, headRepoDir);
+
+        // Load the files based on user-provided input
+        var (baseFileContent, headFileContent) = await loader.Load(baseFileName, headFileName);
+
+        Console.WriteLine("Base File Content:");
+        Console.WriteLine(baseFileContent);
+
+        Console.WriteLine("Head File Content:");
+        Console.WriteLine(headFileContent);
     }
+
     
     // ruleid: regular-expression-dos
     public void ValidateRegex(string search)
