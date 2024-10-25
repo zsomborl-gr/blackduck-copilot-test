@@ -6,7 +6,7 @@ namespace CodeSecurityGuardrails.FindingMatching;
 /// <summary>
 ///     Loads file source code from disk
 /// </summary>
-public class FileSrcPairLoader : ISrcPairLoader
+public class FileSrcPairLoader
 {
     private readonly string _baseRepoDir;
     private readonly string _headRepoDir;
