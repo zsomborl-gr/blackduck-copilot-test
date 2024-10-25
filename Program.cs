@@ -37,7 +37,7 @@ class Program
 
     
     // ruleid: regular-expression-dos
-    public void ValidateRegex(string search)
+    public static void ValidateRegex(string search)
     {
         Regex rgx = new Regex("^A(B|C+)+D");
         rgx.Match(search);
