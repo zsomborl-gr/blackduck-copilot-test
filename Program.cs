@@ -13,10 +13,10 @@ class Program
             return;
         }
 
-        //string baseFileName = args[0];
-        //string headFileName = args[1];
-        string baseFileName = "abc";
-        string headFileName = "123";
+        string baseFileName = args[0];
+        string headFileName = args[1];
+        //string baseFileName = "abc";
+        //string headFileName = "123";
 
         ValidateRegex(baseFileName);
 
